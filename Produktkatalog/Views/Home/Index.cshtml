@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Produktkatalog</h1>
+    <p class="lead">En applikation för att katalogisera produkter.</p>
+    <p><a href="@Url.Action("Index", "Produkter")" class="btn btn-primary btn-lg">Lista Produkter &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Lägg till produkt</h2>
+        <p>
+            Med produktkatalogen kan du enkelt lägga till nya produkter i katalogen.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Create", "Produkter")">Lägg till produkt &raquo;</a></p>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Produktöversikt</h2>
+        <p>I produktöversikten kan du lista samtliga produkter i katalogen.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Produkter")">Lista produkter &raquo;</a></p>
+    </div>
+</div>

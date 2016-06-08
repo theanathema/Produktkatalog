@@ -1,0 +1,48 @@
+﻿@model Produktkatalog.Models.Produkt
+
+@{
+    ViewBag.Title = "Ta Bort Produkt";
+}
+
+<h2>Ta bort produkt</h2>
+
+<h3>Är du säker på att du vill ta bort denna produkt?</h3>
+<div>
+    <h4>Produkt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Namn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Namn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pris)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pris)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beskrivning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beskrivning)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Ta Bort" class="btn btn-default" /> |
+            @Html.ActionLink("Tillbaka till produktkatalogen", "Index")
+        </div>
+    }
+</div>
